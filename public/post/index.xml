@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on daiki</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on daiki</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 30 Jun 2024 21:47:24 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SECCON Beginners 2024 (crypto)</title>
+      <link>http://localhost:1313/post/crypto/seccon4b/</link>
+      <pubDate>Sun, 30 Jun 2024 21:47:24 +0900</pubDate>
+      <guid>http://localhost:1313/post/crypto/seccon4b/</guid>
+      <description>SECCON Beginners CTF 2024のcrypto分野のwriteupです. Safe Prime (362 Solved) 問題 $n$ , $e$ が与えられる. RSA暗号を解読せよ. ただし, $q=2p+1$である.</description>
+    </item>
+  </channel>
+</rss>
