@@ -10,16 +10,16 @@ SECCON Beginners CTF 2024のcrypto分野のwriteupです.
 ## Safe Prime (362 Solved)
 
 > **問題** 
-> 
-> $n$ , $c$ が与えられる. RSA暗号を解読せよ. ただし, $q=2p+1$ である.
+>
+> RSA暗号を使用して暗号化されたメッセージ $c$ を暗号化せよ. 以下の情報が与えられている. 
+> - 公開鍵 $n  (=pq)$ と $e$
+> - $p>q$ とすると, $q=2p+1$
 
-$n=pq=2p^2+p$ なので $p$についての二次方程式を解くことで $p$, $q$ を求めることができます.
-
-以下のコードで答えを求めることができます.
+$n=pq=2p^2+p$ なので,  $p$ についての二次方程式を解くことで $p$, $q$ を求めることができます.
 
 ```python
-from sage.all import var, solve
 from output import n, c, e
+from sage.all import var, solve
 from Crypto.Util.number import long_to_bytes
 
 x = var('x')
