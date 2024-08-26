@@ -15,7 +15,32 @@
 <meta name="twitter:description" content="目次 interencdec Mod 26 The Numbers 13 rsa_oracle interencdec [Easy] Overview Can you get the real meaning from this file. enc_flag が与えられます. 1 YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclh6ZzVNR3N5TXpjNWZRPT0nCg== 上記の文字列を解読する問題です. Solution 最後に=があるため, enc_flagはBase64でエンコードされた文字列だと思われます. (Base64ではエンコード後の文字列の長さが4の倍数になるように=を足して調整をします) Base64デコードをしてみます. 1 2 $ cat enc_flag | base64 -d b&#39;d3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ==&#39; どうやらもう一度Base64デコードする必要があるようです. 1 2 $ echo &#34;d3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ==&#34; | base64 -d wpjvJAM{jhlzhy_k3jy9wa3k_890k2379} wpjvJAM{jhlzhy_k3jy9wa3k_890k2379}という文字列が得られました. 答えがpicoCTF{&hellip;}という形であることを考えると, おそらく換字式暗号だろうと予想できます. p-&gt;w, i-&gt;pがそれぞれ7文字シフトであることから, 換字式暗号の中でも特にシーザー暗号を考えれば良さそうです. Pythonで実装をしました. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 ciphertext = &#34;wpjvJAM{jhlzhy_k3jy9wa3k_890k2379}&#34; def caesar(text, shift): result = &#34;&#34; for c in text: if c.">
   
 
+<style>
+:root {
+    --ja-g-font-family: 'Zen Maru Gothic', '游ゴシック', '游ゴシック Medium',
+    'Yu Gothic Medium', '游ゴシック体', 'Yu Gothic', YuGothic,
+    'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo';
 
+    --article-font-family: var(--ja-g-font-family), var(--base-font-family);
+    --base-font-family: var(--ja-g-font-family), 'Lato', var(--sys-font-family),
+    var(--zh-font-family), sans-serif;
+    --code-font-family: 'Ricty Diminished', Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+}
+</style>
+
+<script>
+(function () {
+    const customFont = document.createElement('link');
+    customFont.href =
+    'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap';
+
+    customFont.type = 'text/css';
+    customFont.rel = 'stylesheet';
+
+    document.head.appendChild(customFont);
+})();
+</script>
     </head>
     <body class="
     article-page

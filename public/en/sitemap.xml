@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-08-26T21:16:41+09:00</lastmod>
+    <lastmod>2024-08-15T22:26:17+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
@@ -20,8 +20,11 @@
                 href="http://localhost:1313/"
                 />
   </url><url>
+    <loc>http://localhost:1313/p/picoctf-crypto-writeup-1/</loc>
+    <lastmod>2024-08-15T22:26:17+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-08-26T21:16:41+09:00</lastmod>
+    <lastmod>2024-08-15T22:26:17+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
     <xhtml:link
